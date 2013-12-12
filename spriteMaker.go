@@ -1,6 +1,7 @@
 package main
 
 import (
+	"container/list"
 	"fmt"
 	"image"
 	"image/color"
@@ -10,34 +11,19 @@ import (
 	"image/png"
 	"log"
 	"os"
+	"strings"
 )
+
+type Element struct {
+	name string
+	img  image.Image
+}
 
 var (
 	white color.Color = color.RGBA{255, 255, 255, 255}
 	black color.Color = color.RGBA{0, 0, 0, 255}
 	blue  color.Color = color.RGBA{0, 0, 255, 255}
 )
-
-/*
-func readAllDirImages(name string) (int, err) {
-	file, err := os.Open("buttons")
-	if err {
-		return
-	}
-
-	files, err := fSrc.Readdir(0)
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println("stars contains", len(files), " files")
-
-
-
-
-	if file.dirinfo != nil {
-		return
-	}
-}*/
 
 // ref) http://golang.org/doc/articles/image_draw.html
 func main() {
@@ -53,8 +39,9 @@ func main() {
 	}
 	fmt.Println("stars contains", len(files), " files")
 
-	images := make([]image.Image, len(files))
-
+	images := list.New()
+	//images := make([]image.Image, len(files))
+	elem := Element{}
 	maxH, maxW := 0, 0
 	for i := range files {
 		//fmt.Println(files[i].Name())
@@ -66,7 +53,10 @@ func main() {
 			//fmt.Println(imgForm)
 			//log.Fatal(err)
 		}
-		images[i] = img
+		elem.name = strings.Split(files[i].Name(), ".")[0]
+		elem.img = img
+		images.PushFront(elem)
+		//images[i] = img
 		maxW += img.Bounds().Size().X
 		if img.Bounds().Size().Y > maxH {
 			maxH = img.Bounds().Size().Y
@@ -79,20 +69,29 @@ func main() {
 		log.Fatal(err)
 	}
 	defer fSrc.Close()
-	//src, _, err := image.Decode(fSrc)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
+	//buf := make([]byte, 1024)
+	cssFile, err := os.Create("style.css")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer cssFile.Close()
 	m := image.NewRGBA(image.Rect(0, 0, maxW, maxH)) //*NRGBA (image.Image interface)
 	curX := 0
-	for i := range images {
+	for e := images.Front(); e != nil; e = e.Next() {
 		p := image.Point{curX, 0}
-		sr := images[i].Bounds()
+		elem = e.Value.(Element)
+		img := elem.img
+		sr := img.Bounds()
+		fmt.Fprintf(cssFile, ".%s\n {\n  width:%dpx;\n  height:%dpx;\n  background:url(buttons.png) -%dpx 0px;\n }\n \n", elem.name, sr.Size().X, sr.Size().Y, curX)
 		curX += sr.Size().X
 		r := image.Rectangle{p, p.Add(sr.Size())}
-		draw.Draw(m, r, images[i], sr.Min, draw.Src)
+		draw.Draw(m, r, img, sr.Min, draw.Src)
 	}
 
 	w, _ := os.Create("buttons.png")
