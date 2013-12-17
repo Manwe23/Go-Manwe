@@ -1,0 +1,26 @@
+; Comment line
+[files]
+Name = zoover
+Count = 2
+
+[image "zoover0"]
+name = zoover-000
+name = zoover-001
+width = 51 
+height = 9
+startX = 0
+startY =  0
+hover = on
+
+[image "zoover1"]
+name = zoover-002
+name = zoover-003
+width = 51 
+height = 9
+startX = 0
+startY =  9
+
+
+;[image "zoover"]
+;name = b # Another comment
+;flag = on # implicit value for bool is true
