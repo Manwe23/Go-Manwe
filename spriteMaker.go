@@ -28,12 +28,28 @@ func stringInSlice(a string, list []string) (bool, int) {
 	return false, 0
 }
 
-func main() {
+func my_misc() {
+	for i := 37; i < 46; i++ {
+		/*[image "zoover4"]
+		name = zoover-008
+		name = zoover-009
+		width = 51
+		height = 9
+		startX = 0
+		startY =  9*/
+		s := fmt.Sprintf("[image \"zoover%d\"]\nname = zoover-0%d\nname = zoover-0%d\nwidth = 51\nheight = 9\nstartX = 0\nstartY =  %d\n\n", i, i*2+7, i*2+8, i*9)
+		fmt.Println(s)
+	}
 
+}
+
+func main() {
 	cfg := struct {
 		Files struct {
 			Name  []string
 			Count []int
+			Size  []int
+			MaxH  []int
 		}
 		Image map[string]*struct {
 			Name   []string
@@ -72,10 +88,18 @@ func main() {
 		elem.name = strings.Split(files[i].Name(), ".")[0]
 		elem.img = img
 		images.PushFront(elem)
-		maxW += img.Bounds().Size().X
-		if img.Bounds().Size().Y > maxH {
-			maxH = img.Bounds().Size().Y
+		if ok, c := stringInSlice(elem.name, cfg.Files.Name); ok {
+			maxW += cfg.Files.Size[c]
+			if cfg.Files.MaxH[c] > maxH {
+				maxH = cfg.Files.MaxH[c]
+			}
+		} else {
+			maxW += img.Bounds().Size().X
+			if img.Bounds().Size().Y > maxH {
+				maxH = img.Bounds().Size().Y
+			}
 		}
+
 	}
 	fmt.Printf("%d x %d\n", maxW, maxH)
 	if err != nil {
