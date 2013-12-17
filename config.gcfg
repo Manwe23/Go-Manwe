@@ -1,26 +1,429 @@
 ; Comment line
 [files]
 Name = zoover
-Count = 2
+Count = 46
+Size = 2346
+MaxH = 9
+
 
 [image "zoover0"]
 name = zoover-000
 name = zoover-001
-width = 51 
+width = 51
 height = 9
 startX = 0
 startY =  0
-hover = on
+;hover = on
 
 [image "zoover1"]
 name = zoover-002
 name = zoover-003
-width = 51 
+width = 51
 height = 9
 startX = 0
 startY =  9
 
 
-;[image "zoover"]
-;name = b # Another comment
-;flag = on # implicit value for bool is true
+[image "zoover2"]
+name = zoover-004
+name = zoover-005
+width = 51
+height = 9
+startX = 0
+startY =  18
+
+
+[image "zoover3"]
+name = zoover-006
+name = zoover-007
+width = 51
+height = 9
+startX = 0
+startY =  27
+
+
+[image "zoover4"]
+name = zoover-008
+name = zoover-009
+width = 51
+height = 9
+startX = 0
+startY =  36
+
+
+[image "zoover5"]
+name = zoover-010
+name = zoover-011
+width = 51
+height = 9
+startX = 0
+startY =  45
+
+
+[image "zoover6"]
+name = zoover-012
+name = zoover-013
+width = 51
+height = 9
+startX = 0
+startY =  54
+
+
+[image "zoover7"]
+name = zoover-014
+name = zoover-015
+width = 51
+height = 9
+startX = 0
+startY =  63
+
+
+[image "zoover8"]
+name = zoover-016
+name = zoover-017
+width = 51
+height = 9
+startX = 0
+startY =  72
+
+
+[image "zoover9"]
+name = zoover-018
+name = zoover-019
+name = zoover-020
+name = zoover-021
+width = 51
+height = 9
+startX = 0
+startY =  81
+
+[image "zoover10"]
+name = zoover-022
+name = zoover-023
+width = 51
+height = 9
+startX = 0
+startY =  90
+
+
+[image "zoover11"]
+name = zoover-024
+name = zoover-025
+width = 51
+height = 9
+startX = 0
+startY =  99
+
+
+[image "zoover12"]
+name = zoover-026
+name = zoover-027
+width = 51
+height = 9
+startX = 0
+startY =  108
+
+
+[image "zoover13"]
+name = zoover-028
+name = zoover-029
+width = 51
+height = 9
+startX = 0
+startY =  117
+
+
+[image "zoover14"]
+name = zoover-030
+name = zoover-031
+width = 51
+height = 9
+startX = 0
+startY =  126
+
+
+[image "zoover15"]
+name = zoover-032
+name = zoover-033
+width = 51
+height = 9
+startX = 0
+startY =  135
+
+
+[image "zoover16"]
+name = zoover-034
+name = zoover-035
+width = 51
+height = 9
+startX = 0
+startY =  144
+
+
+[image "zoover17"]
+name = zoover-036
+name = zoover-037
+width = 51
+height = 9
+startX = 0
+startY =  153
+
+
+[image "zoover18"]
+name = zoover-038
+name = zoover-039
+name = zoover-040
+name = zoover-041
+width = 51
+height = 9
+startX = 0
+startY =  162
+
+
+[image "zoover19"]
+name = zoover-042
+name = zoover-043
+width = 51
+height = 9
+startX = 0
+startY =  171
+
+
+[image "zoover20"]
+name = zoover-044
+name = zoover-045
+width = 51
+height = 9
+startX = 0
+startY =  180
+
+
+[image "zoover21"]
+name = zoover-046
+name = zoover-047
+width = 51
+height = 9
+startX = 0
+startY =  189
+
+
+[image "zoover22"]
+name = zoover-048
+name = zoover-049
+width = 51
+height = 9
+startX = 0
+startY =  198
+
+[image "zoover23"]
+name = zoover-050
+width = 51
+height = 9
+startX = 0
+startY =  207
+
+
+[image "zoover24"]
+name = zoover-051
+name = zoover-052
+width = 51
+height = 9
+startX = 0
+startY =  216
+
+
+[image "zoover25"]
+name = zoover-053
+name = zoover-054
+width = 51
+height = 9
+startX = 0
+startY =  225
+
+
+[image "zoover26"]
+name = zoover-055
+name = zoover-056
+width = 51
+height = 9
+startX = 0
+startY =  234
+
+
+[image "zoover27"]
+name = zoover-057
+name = zoover-058
+name = zoover-059
+name = zoover-060
+width = 51
+height = 9
+startX = 0
+startY =  243
+
+
+[image "zoover28"]
+name = zoover-061
+name = zoover-062
+width = 51
+height = 9
+startX = 0
+startY =  252
+
+
+[image "zoover29"]
+name = zoover-063
+name = zoover-064
+width = 51
+height = 9
+startX = 0
+startY =  261
+
+
+[image "zoover30"]
+name = zoover-065
+name = zoover-066
+width = 51
+height = 9
+startX = 0
+startY =  270
+
+
+[image "zoover31"]
+name = zoover-067
+name = zoover-068
+width = 51
+height = 9
+startX = 0
+startY =  279
+
+
+[image "zoover32"]
+name = zoover-069
+name = zoover-070
+width = 51
+height = 9
+startX = 0
+startY =  288
+
+
+[image "zoover33"]
+name = zoover-071
+name = zoover-072
+width = 51
+height = 9
+startX = 0
+startY =  297
+
+
+[image "zoover34"]
+name = zoover-073
+name = zoover-074
+width = 51
+height = 9
+startX = 0
+startY =  306
+
+
+[image "zoover35"]
+name = zoover-075
+name = zoover-076
+width = 51
+height = 9
+startX = 0
+startY =  315
+
+
+[image "zoover36"]
+name = zoover-077
+name = zoover-078
+name = zoover-079
+name = zoover-080
+width = 51
+height = 9
+startX = 0
+startY =  324
+
+
+
+[image "zoover37"]
+name = zoover-081
+name = zoover-082
+width = 51
+height = 9
+startX = 0
+startY =  333
+
+
+[image "zoover38"]
+name = zoover-083
+name = zoover-084
+width = 51
+height = 9
+startX = 0
+startY =  342
+
+
+[image "zoover39"]
+name = zoover-085
+name = zoover-086
+width = 51
+height = 9
+startX = 0
+startY =  351
+
+
+[image "zoover40"]
+name = zoover-087
+name = zoover-088
+width = 51
+height = 9
+startX = 0
+startY =  360
+
+
+[image "zoover41"]
+name = zoover-089
+name = zoover-090
+width = 51
+height = 9
+startX = 0
+startY =  369
+
+
+[image "zoover42"]
+name = zoover-091
+name = zoover-092
+width = 51
+height = 9
+startX = 0
+startY =  378
+
+
+[image "zoover43"]
+name = zoover-093
+name = zoover-094
+width = 51
+height = 9
+startX = 0
+startY =  387
+
+
+[image "zoover44"]
+name = zoover-095
+name = zoover-096
+width = 51
+height = 9
+startX = 0
+startY =  396
+
+
+[image "zoover45"]
+name = zoover-097
+name = zoover-098
+name = zoover-099
+name = zoover-100
+width = 51
+height = 9
+startX = 0
+startY =  405
+
