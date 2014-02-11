@@ -1,0 +1,429 @@
+; Comment line
+[info]
+Sufix = zoover- 
+Count = 46
+Width = 2346
+MaxH = 9
+
+
+[image "0"]
+name = 000
+name = 001
+width = 51
+height = 9
+startX = 0
+startY =  0
+;hover = on
+
+[image "1"]
+name = 002
+name = 003
+width = 51
+height = 9
+startX = 0
+startY =  9
+
+
+[image "2"]
+name = 004
+name = 005
+width = 51
+height = 9
+startX = 0
+startY =  18
+
+
+[image "3"]
+name = 006
+name = 007
+width = 51
+height = 9
+startX = 0
+startY =  27
+
+
+[image "4"]
+name = 008
+name = 009
+width = 51
+height = 9
+startX = 0
+startY =  36
+
+
+[image "5"]
+name = 010
+name = 011
+width = 51
+height = 9
+startX = 0
+startY =  45
+
+
+[image "6"]
+name = 012
+name = 013
+width = 51
+height = 9
+startX = 0
+startY =  54
+
+
+[image "7"]
+name = 014
+name = 015
+width = 51
+height = 9
+startX = 0
+startY =  63
+
+
+[image "8"]
+name = 016
+name = 017
+width = 51
+height = 9
+startX = 0
+startY =  72
+
+
+[image "9"]
+name = 018
+name = 019
+name = 020
+name = 021
+width = 51
+height = 9
+startX = 0
+startY =  81
+
+[image "10"]
+name = 022
+name = 023
+width = 51
+height = 9
+startX = 0
+startY =  90
+
+
+[image "11"]
+name = 024
+name = 025
+width = 51
+height = 9
+startX = 0
+startY =  99
+
+
+[image "12"]
+name = 026
+name = 027
+width = 51
+height = 9
+startX = 0
+startY =  108
+
+
+[image "13"]
+name = 028
+name = 029
+width = 51
+height = 9
+startX = 0
+startY =  117
+
+
+[image "14"]
+name = 030
+name = 031
+width = 51
+height = 9
+startX = 0
+startY =  126
+
+
+[image "15"]
+name = 032
+name = 033
+width = 51
+height = 9
+startX = 0
+startY =  135
+
+
+[image "16"]
+name = 034
+name = 035
+width = 51
+height = 9
+startX = 0
+startY =  144
+
+
+[image "17"]
+name = 036
+name = 037
+width = 51
+height = 9
+startX = 0
+startY =  153
+
+
+[image "18"]
+name = 038
+name = 039
+name = 040
+name = 041
+width = 51
+height = 9
+startX = 0
+startY =  162
+
+
+[image "19"]
+name = 042
+name = 043
+width = 51
+height = 9
+startX = 0
+startY =  171
+
+
+[image "20"]
+name = 044
+name = 045
+width = 51
+height = 9
+startX = 0
+startY =  180
+
+
+[image "21"]
+name = 046
+name = 047
+width = 51
+height = 9
+startX = 0
+startY =  189
+
+
+[image "22"]
+name = 048
+name = 049
+width = 51
+height = 9
+startX = 0
+startY =  198
+
+[image "23"]
+name = 050
+width = 51
+height = 9
+startX = 0
+startY =  207
+
+
+[image "24"]
+name = 051
+name = 052
+width = 51
+height = 9
+startX = 0
+startY =  216
+
+
+[image "25"]
+name = 053
+name = 054
+width = 51
+height = 9
+startX = 0
+startY =  225
+
+
+[image "26"]
+name = 055
+name = 056
+width = 51
+height = 9
+startX = 0
+startY =  234
+
+
+[image "27"]
+name = 057
+name = 058
+name = 059
+name = 060
+width = 51
+height = 9
+startX = 0
+startY =  243
+
+
+[image "28"]
+name = 061
+name = 062
+width = 51
+height = 9
+startX = 0
+startY =  252
+
+
+[image "29"]
+name = 063
+name = 064
+width = 51
+height = 9
+startX = 0
+startY =  261
+
+
+[image "30"]
+name = 065
+name = 066
+width = 51
+height = 9
+startX = 0
+startY =  270
+
+
+[image "31"]
+name = 067
+name = 068
+width = 51
+height = 9
+startX = 0
+startY =  279
+
+
+[image "32"]
+name = 069
+name = 070
+width = 51
+height = 9
+startX = 0
+startY =  288
+
+
+[image "33"]
+name = 071
+name = 072
+width = 51
+height = 9
+startX = 0
+startY =  297
+
+
+[image "34"]
+name = 073
+name = 074
+width = 51
+height = 9
+startX = 0
+startY =  306
+
+
+[image "35"]
+name = 075
+name = 076
+width = 51
+height = 9
+startX = 0
+startY =  315
+
+
+[image "36"]
+name = 077
+name = 078
+name = 079
+name = 080
+width = 51
+height = 9
+startX = 0
+startY =  324
+
+
+
+[image "37"]
+name = 081
+name = 082
+width = 51
+height = 9
+startX = 0
+startY =  333
+
+
+[image "38"]
+name = 083
+name = 084
+width = 51
+height = 9
+startX = 0
+startY =  342
+
+
+[image "39"]
+name = 085
+name = 086
+width = 51
+height = 9
+startX = 0
+startY =  351
+
+
+[image "40"]
+name = 087
+name = 088
+width = 51
+height = 9
+startX = 0
+startY =  360
+
+
+[image "41"]
+name = 089
+name = 090
+width = 51
+height = 9
+startX = 0
+startY =  369
+
+
+[image "42"]
+name = 091
+name = 092
+width = 51
+height = 9
+startX = 0
+startY =  378
+
+
+[image "43"]
+name = 093
+name = 094
+width = 51
+height = 9
+startX = 0
+startY =  387
+
+
+[image "44"]
+name = 095
+name = 096
+width = 51
+height = 9
+startX = 0
+startY =  396
+
+
+[image "45"]
+name = 097
+name = 098
+name = 099
+name = 100
+width = 51
+height = 9
+startX = 0
+startY =  405
+
