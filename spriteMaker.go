@@ -32,30 +32,10 @@ type Gcfg struct {
 	}
 }
 
-func (p *Gcfg) Clear() {
-	p = &Gcfg{}
-}
-
 type Element struct {
 	name string
 	img  image.Image
 }
-
-func stringInSlice(a string, list []string) (bool, int) {
-	for i, b := range list {
-		if b == a {
-			return true, i
-		}
-	}
-	return false, 0
-}
-
-/*
-(-d) - images directory
-(-s) - sprite outfile
-(-c) - css outfile
-(-g) - config file (gcfg format)
-*/
 
 var dirSrc string
 var spriteOutFile string
@@ -70,11 +50,8 @@ func init() {
 	flag.Parse()
 }
 
-func main() {
-
-	cfg := Gcfg{}
-	configsId := make(map[string]int)
-	fmt.Println("start...")
+func loadData(images *list.List) (maxH int, maxW int, configs []Gcfg, configsId map[string]int, err error) {
+	fmt.Printf("Loading data... ")
 	fSrc, err := os.Open(dirSrc)
 	if err != nil {
 		log.Fatal(err)
@@ -83,11 +60,11 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	configsId = make(map[string]int)
 	fmt.Println(dirSrc, " contains", len(files), " files")
-	configs := make([]Gcfg, len(files))
-	images := list.New()
+	configs = make([]Gcfg, len(files))
 	elem := Element{}
-	maxH, maxW := 0, 0
+	maxH, maxW = 0, 0
 	for i := range files {
 		imgSrc, err := os.Open(fmt.Sprintf("%s%c%s", dirSrc, os.PathSeparator, files[i].Name()))
 		defer imgSrc.Close()
@@ -123,7 +100,14 @@ func main() {
 			}
 		}
 	}
-	fmt.Printf("%d x %d\n", maxW, maxH)
+	fmt.Println("Done.\n")
+	return
+}
+
+func generate(images *list.List, maxH int, maxW int, configs []Gcfg, configsId map[string]int) error {
+	fmt.Printf("Generating data... ")
+	elem := Element{}
+	cfg := Gcfg{}
 	cssFile, err := os.Create(cssOutFile)
 	if err != nil {
 		log.Fatal(err)
@@ -163,11 +147,27 @@ func main() {
 				draw.Draw(m, r, img, image.Point{spritePart.StartX, spritePart.StartY}, draw.Src)
 				p = image.Point{curX, 0}
 			}
-			cfg.Clear()
 		}
 	}
 
 	w, _ := os.Create(spriteOutFile)
 	defer w.Close()
 	png.Encode(w, m) //Encode writes the Image m to w in PNG format.
+	fmt.Println("Done.")
+	return nil
+}
+
+func main() {
+
+	fmt.Println("start...")
+	images := list.New()
+	maxH, maxW, configs, configsId, err := loadData(images)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%d x %d\n", maxW, maxH)
+	err = generate(images, maxH, maxW, configs, configsId)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
